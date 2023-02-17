@@ -1,0 +1,87 @@
+.app-bar {
+    min-height: 100vh;
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    background: var(--mainWhite);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.nav__center {
+    padding: 2rem;
+}
+
+.nav__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.open {
+    height: 150px;
+}
+
+.links .nav__item {
+    background: var(--mainWhite);
+    color: #133049;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    letter-spacing: 0.25rem;
+    display: block;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+
+.nav__header .nav__toggle {
+    font-size: 2.4rem;
+    color: var(--secondaryColor);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav__header .nav__toggle:hover {
+    transform: rotate(90deg);
+}
+
+.nav__header a {
+    font-size: 2.4rem;
+    color: var(--secondaryColor);
+    letter-spacing: 0.25rem;
+    height: 50px;
+    text-transform: uppercase;
+    max-width: 44px;
+    min-width: 44px;
+}
+
+.fixed-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--mainWhite);
+    box-shadow: var(--lightShadow);
+    z-index: 9999;
+}
+
+.fixed-nav .links a {
+    color: #133049;
+}
+
+.fixed-nav .links a:hover {
+    color: var(--secondaryColor);
+}
