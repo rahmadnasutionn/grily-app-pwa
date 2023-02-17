@@ -28,6 +28,9 @@
         "max-len": 0,
         "prefer-destructuring":"off",
         "import/no-extraneous-dependencies": "off",
-        "import/order": "off"
+        "import/order": "off",
+        "implicit-arrow-linebreak":"off",
+        "prefer-regex-literals": "off",
+        "function-paren-newline":"off"
     }
 }

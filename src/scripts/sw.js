@@ -1,7 +1,6 @@
 import 'regenerator-runtime';
-import { precacheAndRoute } from 'workbox-precaching';
+import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching';
 import { setCacheNameDetails } from 'workbox-core';
-import { cleanupOutdatedCaches } from 'workbox-precaching';
 import { StaleWhileRevalidate, CacheFirst, NetworkFirst } from 'workbox-strategies';
 import CONFIG from './globals/config';
 import { registerRoute } from 'workbox-routing';
@@ -19,7 +18,7 @@ precacheAndRoute(self.__WB_MANIFEST);
 registerRoute(
     /^https:\/\/restaurant-api\.dicoding\.dev\/(?:(list|detail))/,
     new NetworkFirst({
-        cacheName: "dicoding-restaurant-grily",
+        cacheName: 'dicoding-restaurant-grily',
         plugins: [
             new ExpirationPlugin({
                 maxAgeSeconds: 60 * 60 * 24 * 30,
@@ -43,10 +42,10 @@ registerRoute(({ request }) => request.destination === 'image',
 
 registerRoute(
     new RegExp(
-        "https://use.fontawesome.com/b070c8f1df.js"
+        'https://use.fontawesome.com/b070c8f1df.js'
     ),
     new CacheFirst({
-        cacheName: "fontawesome"
+        cacheName: 'fontawesome'
     }),
 );
 

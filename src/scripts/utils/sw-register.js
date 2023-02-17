@@ -12,7 +12,7 @@ const swRegister = async() => {
         if (!event.isUpdate) {
             console.log('Service worker activated');
         }
-    })
+    });
 
     try {
         await wb.register();
